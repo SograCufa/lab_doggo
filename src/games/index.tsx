@@ -99,16 +99,15 @@ export const GAMES: GameBundle[] = [
     app: React.lazy(() => import('./Plinko')),
   },
   {
-    id: 'plinko',
+    id: 'slots',
     meta: {
-      background: '#7272ff',
-      image: '/games/plinko.png',
-      name: 'Plinko',
+      background: '#5465ff',
+      name: 'Slots',
+      image: '/games/luckydoggo.png',
       description: `
-        Plinko is played by dropping chips down a pegged board where they randomly fall into slots with varying win amounts. Each drop is a mix of anticipation and strategy, making Plinko an endlessly entertaining game of chance.
-        ⚠️ Under development. Results shown might be incorrect. ⚠️
+        Slots is the quintessential game of luck and anticipation. Spin the reels and match symbols to win, with potential rewards displayed upfront. A fair and exciting game, Slots offers a classic casino experience tailored for digital enjoyment.
       `,
     },
-    app: React.lazy(() => import('./Plinko')),
+    app: React.lazy(() => import('./Slots')),
   },
 ]
