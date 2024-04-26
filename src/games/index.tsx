@@ -98,4 +98,17 @@ export const GAMES: GameBundle[] = [
     },
     app: React.lazy(() => import('./Plinko')),
   },
+  {
+    id: 'plinko',
+    meta: {
+      background: '#7272ff',
+      image: '/games/plinko.png',
+      name: 'Plinko',
+      description: `
+        Plinko is played by dropping chips down a pegged board where they randomly fall into slots with varying win amounts. Each drop is a mix of anticipation and strategy, making Plinko an endlessly entertaining game of chance.
+        ⚠️ Under development. Results shown might be incorrect. ⚠️
+      `,
+    },
+    app: React.lazy(() => import('./Plinko')),
+  },
 ]
