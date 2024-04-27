@@ -68,8 +68,8 @@ export default function App() {
               <p><b>😁 MEME CONTEST prize pool 500$</b></p>
               <p><b>💰 No private sale No VCs</b></p>
               <a href="https://doggogames.com/"><p><b>https://doggogames.com/</b></p></a>
-              <a href="https://twitter.com/SolDoggoGames"><p><b>Twitter DOGGO GAMES</b></p></a>
-              <a href="https://t.me/doggogames"><p><b>DOGGO GAMES</b></p></a>
+              <a href="https://twitter.com/SolDoggoGames"><p><b>https://twitter.com/SolDoggoGames</b></p></a>
+              <a href="https://t.me/doggogames"><p><b>https://t.me/doggogames</b></p></a>
             </div>
             <div style={{ background: 'linear-gradient(180deg, transparent, #15151f)', height: '50px', pointerEvents: 'none', width: '100%', position: 'absolute', bottom: '0px', left: '0px' }}></div>
           </div>
