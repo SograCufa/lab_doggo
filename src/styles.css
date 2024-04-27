@@ -41,7 +41,10 @@ h1, h2 {
   font-size: 42px;
 }
 p{
-  font-family: codec-title;
+  font-family: codec-par;
+}
+button{
+  font-family: codec-par;
 }
 
 body {
