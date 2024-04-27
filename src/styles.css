@@ -45,6 +45,8 @@ p{
 }
 button{
   font-family: codec-par;
+  background-color: #9340ff;
+  font: white;
 }
 
 body {
