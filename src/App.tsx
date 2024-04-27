@@ -56,17 +56,20 @@ export default function App() {
           <h1>Welcome to DOGGO GAMES</h1>
           <div style={{ position: 'relative' }}>
             <div style={{ maxHeight: '400px', padding: '10px', overflow: 'auto', position: 'relative' }}>
-              <p><b>DOGGO$: Where Casino Games and crypto collide, bringing you laid-back meme fiesta and daily LIVE NIGHT CASINO EVENT</b></p>
-              <p><b>20+ International and local groups/channel</b></p>
-              <p><b>100+ KOLS</b></p>
-              <p><b>10+ International YouTubers</b></p>
-              <p><b>CMC Fast Tracking Listing PAID</b></p>
-              <p><b>50k+ Marketing Budget</b> </p>
-              <p><b>Shilling + Raids 24/7</b> </p>
-              <p><b>AMA + DOXX + AUDIT + KYC Badges on PinkSale</b> </p>
-              <p><b>AIRDROP is LIVE with 2.1000.000 DOGGO$</b></p>
-              <p><b>MEME CONTEST prize pool 500$</b></p>
-              <p><b>No private sale No VCs</b></p>
+              <p><b>🐶 DOGGO$: Where Casino Games and crypto collide, bringing you laid-back meme fiesta and daily LIVE NIGHT CASINO EVENT</b></p>
+              <p><b>🐾 20+ International and local groups/channel</b></p>
+              <p><b>🚀 100+ KOLS</b></p>
+              <p><b>🔒 10+ International YouTubers</b></p>
+              <p><b>⚙️ CMC Fast Tracking Listing PAID</b></p>
+              <p><b>🥶 50k+ Marketing Budget</b> </p>
+              <p><b>💻 Shilling + Raids 24/7</b> </p>
+              <p><b>🔍 AMA + DOXX + AUDIT + KYC Badges on PinkSale</b> </p>
+              <p><b>💯 AIRDROP is LIVE with 2.1000.000 DOGGO$</b></p>
+              <p><b>😁 MEME CONTEST prize pool 500$</b></p>
+              <p><b>💰 No private sale No VCs</b></p>
+              <a href="https://doggogames.com/"><p><b>https://doggogames.com/</b></p></a>
+              <a href="https://twitter.com/SolDoggoGames"><p><b>Twitter DOGGO GAMES</b></p></a>
+              <a href="https://t.me/doggogames"><p><b>DOGGO GAMES</b></p></a>
             </div>
             <div style={{ background: 'linear-gradient(180deg, transparent, #15151f)', height: '50px', pointerEvents: 'none', width: '100%', position: 'absolute', bottom: '0px', left: '0px' }}></div>
           </div>
