@@ -21,9 +21,17 @@
   --gamba-ui-input-color: #ffffff;
   --gamba-ui-input-background-hover: #11111d;
 }
+@font-face {
+  font-family: codec-title;
+  src: url(./font/title.ttf);
+}
+@font-face {
+  font-family: codec-par;
+  src: url(./font/par.ttf);
+}
 
 body, input, button, textarea, pre {
-  font-family: 'DM Sans', 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: codec-title, codec-par;
   font-size: 16px;
 }
 
