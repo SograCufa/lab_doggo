@@ -40,6 +40,9 @@ h1, h2 {
   font-family: codec-title;
   font-size: 42px;
 }
+p{
+  font-family: codec-title;
+}
 
 body {
   background: url(../public/bg1920.png );
