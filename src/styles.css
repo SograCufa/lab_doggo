@@ -31,7 +31,7 @@
 }
 
 body, input, button, textarea, pre {
-  font-family: codec-title, codec-par;
+  font-family: 'DM Sans', 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 16px;
 }
 
