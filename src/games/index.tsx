@@ -110,4 +110,14 @@ export const GAMES: GameBundle[] = [
     },
     app: React.lazy(() => import('./Slots')),
   },
+  {
+    id: "limbo",
+    meta: {
+      background: "#ff7d7d",
+      name: "Limbo",
+      image: "/games/logo.png",
+      description: `Limbo challenges players to walk the fine line between ambition and caution, where every decision shapes their destiny. Set a target multiplier and place your bet, daring to defy the odds. As the stakes rise, so does the adrenaline, pushing players to test their strategy and intuition in pursuit of monumental victories, ensuring an immersive and adrenaline-fueled gaming experience.`,
+    },
+    app: React.lazy(() => import("./Limbo")),
+  },
 ]
