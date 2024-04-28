@@ -50,7 +50,7 @@ button{
 }
 
 body {
-  background: url(../public/bg1920.png );
+  background: url(../public/bg01.png);
   color: var(--text-color);
   cursor: default;
   margin: 0;
