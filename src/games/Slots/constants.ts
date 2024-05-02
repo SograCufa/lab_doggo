@@ -23,7 +23,6 @@ const slotItem = (multiplier: number, ...icons: string[]): SlotItem[] =>
 
 export const SLOT_ITEMS = [
   slotItem(7, IMAGE_UNICORN),
-  slotItem(5, IMAGE_5X),
 ].flat()
 
 export const NUM_SLOTS = 3
