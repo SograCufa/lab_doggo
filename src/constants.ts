@@ -33,6 +33,8 @@ const lp = (tokenMint: PublicKey | string, poolAuthority?: PublicKey | string): 
  * For private pools, add the creator of the Liquidity Pool as a second argument
  */
 export const POOLS = [
+  // doggo:
+  lp('BVNjgfQRVbtWRYL9WbPiDA9eXQeTxq3847aSJmUAU2Pj'),
    // Fake token:
    lp(FAKE_TOKEN_MINT),
   // SOL:
@@ -52,6 +54,15 @@ export const DEFAULT_POOL = POOLS[0]
  * Alternatively, we can provide a fetcher method to automatically fetch metdata. See TOKEN_METADATA_FETCHER below.
  */
 export const TOKEN_METADATA: (Partial<TokenMeta> & {mint: PublicKey})[] = [
+  {
+    mint: new PublicKey('BVNjgfQRVbtWRYL9WbPiDA9eXQeTxq3847aSJmUAU2Pj'),
+    name: 'DOGGO GAMES',
+    symbol: 'DOGGO$',
+    image: 'https://cdn.discordapp.com/attachments/1233523783445385318/1235183039215046686/doggo_games.png?ex=66337159&is=66321fd9&hm=55c2812ad40f1b04f1bdb5805ac79c27c20538434abf6d137aa1773050346f4b&',
+    baseWager: 1e9,
+    decimals: 9,
+    usdPrice: 0,
+  },
   {
     mint: 'FAKE_TOKEN_MINT',
     name: 'FKDOGGO',
