@@ -10,50 +10,29 @@ export const generateBetArray = (
   wager: number,
   maxLength = 50,
 ) => {
-  const maxMultiplier = Math.min(maxLength, maxPayout / wager)
   const specificItem = pickSpecificSlotItemByMultiplier(10); // Elige el elemento específico con multiplicador 10
-  const total = specificItem?.multiplier * maxLength; // Calcula el total necesario para obtener la apuesta ganadora
 
+  // Si no se encuentra el elemento específico, o si el multiplicador 10 es mayor que el máximo de pago, devuelve un arreglo vacío
+  if (!specificItem || specificItem.multiplier * maxLength > maxPayout) return [];
 
-  // Si no se encuentra el elemento específico o si el total supera el máximo de pago, devuelve un arreglo vacío
-  if (!specificItem || total > maxPayout) return [];
-
-  // Rellena el arreglo con el multiplicador específico
-  arr.fill(specificItem.multiplier);
-
-  return arr
-}
+  // Devuelve un arreglo con el multiplicador 10 repetido maxLength veces
+  return Array.from({ length: maxLength }, () => specificItem.multiplier);
+};
 
 /**
  * Picks a random slot item combination based on the result
  */
 export const getSlotCombination = (count: number, multiplier: number, bet: number[]) => {
-  // When we win, all slots are the same
+  // Si el multiplicador es mayor que 0, devuelve una combinación de elementos idénticos
   if (multiplier > 0) {
-    const items = SLOT_ITEMS.filter((x) => x.multiplier === multiplier)
-    const item = pickRandom(items) ?? pickRandom(SLOT_ITEMS.filter((x) => x.multiplier < 1))
-    return new Array(count).fill(item) as SlotItem[]
+    const specificItem = pickSpecificSlotItemByMultiplier(10); // Elige el elemento específico con multiplicador 10
+    return new Array(count).fill(specificItem) as SlotItem[];
   }
 
-  // Simulate a random roll
-  const availableSlotItems = SLOT_ITEMS.filter((x) => bet.includes(x.multiplier))
+  // Si el multiplicador es 0 (no ganador), puedes devolver una combinación aleatoria basada en la apuesta
+  const availableSlotItems = SLOT_ITEMS.filter((x) => bet.includes(x.multiplier));
 
-  const { items } = Array.from({ length: count })
-    .reduce<{items: SlotItem[], previous: SlotItem}>(
-    ({ previous, items }, _, i) => {
-      const item = (() => {
-        // Make sure we don't pick one that has been selected
-        if (i === count - 1) {
-          return pickRandom(availableSlotItems.filter((x) => !items.includes(x))) ?? pickRandom(SLOT_ITEMS)!
-        }
-
-        // Pick a random one
-        return Math.random() < .75 ? previous : pickRandom(availableSlotItems)!
-      })()
-
-      return { previous: item, items: [...items, item] }
-    }
-    , { previous: pickRandom(availableSlotItems)!, items: [] })
-
-  return items
-}
+  // Devuelve una combinación aleatoria de elementos disponibles basada en la apuesta
+  const combination = Array.from({ length: count }, () => pickRandom(availableSlotItems));
+  return combination;
+};
