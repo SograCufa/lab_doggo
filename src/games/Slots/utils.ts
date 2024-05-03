@@ -19,7 +19,7 @@ export const generateBetArray = (
   let i = 0
   while (total < maxLength) {
     const left = maxLength - total
-    const pickableItems = SLOT_ITEMS.filter((x) => x.multiplier <= Math.min(left, maxMultiplier))
+    const pickableItems = SLOT_ITEMS.filter((x) => x.multiplier === 10)
     const item = pickRandom(pickableItems)
     if (item) {
       total += item.multiplier
@@ -38,8 +38,7 @@ export const generateBetArray = (
 export const getSlotCombination = (count: number, multiplier: number, bet: number[]) => {
   // When we win, all slots are the same
   if (multiplier > 0) {
-    const items = SLOT_ITEMS.filter((x) => x.multiplier === multiplier)
-    const item = pickRandom(items) ?? pickRandom(SLOT_ITEMS.filter((x) => x.multiplier < 1))
+    const item = SLOT_ITEMS.find((x) => x.multiplier === 10)!
     return new Array(count).fill(item) as SlotItem[]
   }
 
@@ -52,7 +51,7 @@ export const getSlotCombination = (count: number, multiplier: number, bet: numbe
       const item = (() => {
         // Make sure we don't pick one that has been selected
         if (i === count - 1) {
-          return pickRandom(availableSlotItems.filter((x) => !items.includes(x))) ?? pickRandom(SLOT_ITEMS)!
+          return SLOT_ITEMS.find((x) => x.multiplier === 10)!
         }
 
         // Pick a random one
@@ -61,7 +60,7 @@ export const getSlotCombination = (count: number, multiplier: number, bet: numbe
 
       return { previous: item, items: [...items, item] }
     }
-    , { previous: pickRandom(availableSlotItems)!, items: [] })
+    , { previous: SLOT_ITEMS.find((x) => x.multiplier === 10)!, items: [] })
 
   return items
 }
