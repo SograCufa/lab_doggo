@@ -8,35 +8,25 @@ const pickRandom = <T>(arr: T[]) => arr.at(Math.floor(Math.random() * arr.length
 export const generateBetArray = (
   maxPayout: number,
   wager: number,
-  winnerMultiplier: number, // Nuevo parámetro para el multiplicador del ítem ganador
   maxLength = 50,
 ) => {
-  const maxMultiplier = Math.min(maxLength, maxPayout / wager - winnerMultiplier); // Restar el multiplicador del ítem ganador del máximo
-  const arr = Array.from({ length: maxLength }).fill(0) as number[];
-  let total = 0;
+  const maxMultiplier = Math.min(maxLength, maxPayout / wager)
+  const arr = Array.from({ length: maxLength }).fill(0) as number[]
+  let total = 0
 
-  // Asegurarse de que el multiplicador del ítem ganador sea menor o igual al máximo permitido
-  const limitedWinnerMultiplier = Math.min(winnerMultiplier, maxMultiplier);
+  if (!maxMultiplier) return []
 
-  if (!maxMultiplier) return [];
-
-  let i = 0;
-
-  // Agregar el ítem ganador a la matriz
-  arr[i] = limitedWinnerMultiplier;
-  total += limitedWinnerMultiplier;
-  i++;
-
-  while (total < maxLength && total + limitedWinnerMultiplier <= maxPayout / wager) {
-    const left = maxLength - total;
-    const pickableItems = SLOT_ITEMS.filter((x) => x.multiplier <= Math.min(left, maxMultiplier));
-    const item = pickRandom(pickableItems);
+  let i = 0
+  while (total < maxLength) {
+    const left = maxLength - total
+    const pickableItems = SLOT_ITEMS.filter((x) => x.multiplier <= Math.min(left, maxMultiplier))
+    const item = pickRandom(pickableItems)
     if (item) {
-      total += item.multiplier;
-      arr[i] = item.multiplier;
+      total += item.multiplier
+      arr[i] = item.multiplier
     }
-    i++;
-    if (i > 1000) break;
+    i++
+    if (i > 1000) break
   }
 
   return arr
