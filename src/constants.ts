@@ -58,7 +58,7 @@ export const TOKEN_METADATA: (Partial<TokenMeta> & {mint: PublicKey})[] = [
     mint: new PublicKey('BVNjgfQRVbtWRYL9WbPiDA9eXQeTxq3847aSJmUAU2Pj'),
     name: 'DOGGO GAMES',
     symbol: 'DOGGO$',
-    image: 'https://cdn.discordapp.com/attachments/1233523783445385318/1235183039215046686/doggo_games.png?ex=66337159&is=66321fd9&hm=55c2812ad40f1b04f1bdb5805ac79c27c20538434abf6d137aa1773050346f4b&',
+    image: 'https://ibb.co/0hPfGw0',
     baseWager: 1e9,
     decimals: 9,
     usdPrice: 0,
