@@ -11,23 +11,15 @@ export const generateBetArray = (
   maxLength = 50,
 ) => {
   const maxMultiplier = Math.min(maxLength, maxPayout / wager)
-  const arr = Array.from({ length: maxLength }).fill(0) as number[]
-  let total = 0
+  const specificItem = pickSpecificSlotItemByMultiplier(10); // Elige el elemento específico con multiplicador 10
+  const total = specificItem?.multiplier * maxLength; // Calcula el total necesario para obtener la apuesta ganadora
 
-  if (!maxMultiplier) return []
 
-  let i = 0
-  while (total < maxLength) {
-    const left = maxLength - total
-    const pickableItems = SLOT_ITEMS.filter((x) => x.multiplier <= Math.min(left, maxMultiplier))
-    const item = pickRandom(pickableItems)
-    if (item) {
-      total += item.multiplier
-      arr[i] = item.multiplier
-    }
-    i++
-    if (i > 1000) break
-  }
+  // Si no se encuentra el elemento específico o si el total supera el máximo de pago, devuelve un arreglo vacío
+  if (!specificItem || total > maxPayout) return [];
+
+  // Rellena el arreglo con el multiplicador específico
+  arr.fill(specificItem.multiplier);
 
   return arr
 }
