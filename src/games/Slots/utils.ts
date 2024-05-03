@@ -1,6 +1,6 @@
 import { SLOT_ITEMS, SlotItem } from './constants'
 
-const pickRandom = <T>(arr: T[]) => arr.at(Math.floor(Math.random() * arr.length))
+const specificSlotItem = pickSpecificSlotItemByMultiplier(10);
 
 /**
  * Creates a bet array for given wager amount and max payout
