@@ -6,13 +6,13 @@ const tickingAnimation = keyframes`
     transform: scale(1);
     filter: brightness(1);
     /* background: #764cc4; */
-    /* box-shadow: 0 0 1px 1px #ffffff00; */
+    /* box-shadow: 0 0 1px 1px #EF38FF; */
   }
   25% {
     transform: scale(0.95);
     filter: brightness(1.5);
     /* background: #945ef7; */
-    /* box-shadow: 0 0 1px 1px #ffffff99; */
+    /* box-shadow: 0 0 1px 1px #A226AD; */
   }
 `
 
