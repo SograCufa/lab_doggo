@@ -1,7 +1,5 @@
 import styled, { css, keyframes } from 'styled-components'
 import { CellStatus } from './types'
-import styled from 'styled-components';
-
 
 // Define el color violeta oscuro
 const darkPurple = '#070208';
@@ -9,31 +7,24 @@ const darkPurple = '#070208';
 // Define el color violeta neón
 const neonPurple = '#C62ED4';
 
-
 const tickingAnimation = keyframes`
   0%, 50%, 100% {
     transform: scale(1);
     filter: brightness(1);
-    /* background: #764cc4; */
-    /* box-shadow: 0 0 1px 1px #EF38FF; */
   }
   25% {
     transform: scale(0.95);
     filter: brightness(1.5);
-    /* background: #945ef7; */
-    /* box-shadow: 0 0 1px 1px #A226AD; */
   }
 `
 
 const goldReveal = keyframes`
   0% {
     filter: brightness(1);
-    /* background: #ffffff; */
     transform: scale(1.1);
   }
   75% {
     filter: brightness(2);
-    /* background: #3fff7a; */
     transform: scale(1.2);
   }
 `
@@ -117,13 +108,13 @@ export const Level = styled.div<{$active: boolean}>`
 `
 
 export const CellButton = styled.button<{status: CellStatus, selected: boolean}>`
-  position: relative;
   display: flex;
+  position: relative;
   align-items: center;
   justify-content: center;
-  background: ${darkPurple}; /* Cambia el color de fondo a púrpura oscuro */
-  color: #fff; /* Cambia el color del texto a blanco */
-  border: none;
+  background: ${darkPurple};
+  color: #fff;
+  border: 2px solid transparent;
   border-radius: 4px;
   font-weight: bold;
   aspect-ratio: 1;
@@ -131,19 +122,7 @@ export const CellButton = styled.button<{status: CellStatus, selected: boolean}>
   transition: background 0.3s, opacity .3s, filter .2s ease;
   font-size: 12px;
   cursor: pointer;
-  overflow: hidden; /* Para ocultar cualquier contenido que se desborde */
-  z-index: 0; /* Asegúrate de que el botón esté detrás del marco */
-  &:before {
-    content: '';
-    position: absolute;
-    top: -5px;
-    left: -5px;
-    right: -5px;
-    bottom: -5px;
-    background: ${neonPurple}; /* Utiliza el color de neón para el fondo del marco */
-    border-radius: 8px; /* Ajusta el radio del borde del marco */
-    z-index: -1; /* Coloca el marco detrás del botón */
-  }
+  text-shadow: 0 0 10px ${neonPurple}, 0 0 20px ${neonPurple}, 0 0 30px ${neonPurple}, 0 0 40px ${neonPurple}, 0 0 70px ${neonPurple}, 0 0 80px ${neonPurple}, 0 0 100px ${neonPurple}, 0 0 150px ${neonPurple};
 
   ${(props) => props.selected && css`
     animation: ${tickingAnimation} .5s ease infinite;
@@ -176,6 +155,20 @@ export const CellButton = styled.button<{status: CellStatus, selected: boolean}>
 
   &:hover:not(:disabled) {
     filter: brightness(1.5);
+  }
+
+  /* Agrega el borde de neón violeta */
+  &:before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    border: 2px solid ${neonPurple};
+    border-radius: 6px;
+    pointer-events: none;
+    animation: ${hoverPulse} 2s linear infinite; /* Agrega animación de pulso */
   }
 `
 
