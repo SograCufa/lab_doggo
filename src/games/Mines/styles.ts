@@ -21,11 +21,11 @@ const tickingAnimation = keyframes`
 const goldReveal = keyframes`
   0% {
     filter: brightness(1);
-    transform: scale(1.1);
+    transform: scale(0.9);
   }
-  75% {
+  100% {
     filter: brightness(2);
-    transform: scale(1.2);
+    transform: scale(1);
   }
 `
 
@@ -34,11 +34,11 @@ const mineReveal = keyframes`
     transform: scale(1);
   }
   50% {
-    transform: scale(1.5);
+    transform: scale(1.3);
   }
-  51% {
+  100% {
     background: #ffffff;
-    transform: scale(1.6);
+    transform: scale(1);
   }
 `
 
