@@ -116,17 +116,13 @@ export const Level = styled.div<{$active: boolean}>`
   `}
 `
 
-export const CellButtonContainer = styled.div`
-  position: relative;
-  display: inline-block;
-`;
-
 export const CellButton = styled.button<{status: CellStatus, selected: boolean}>`
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: ${darkPurple}; /* Change background color to dark purple */
-  color: #fff; /* Change text color to white */
+  background: ${darkPurple}; /* Cambia el color de fondo a púrpura oscuro */
+  color: #fff; /* Cambia el color del texto a blanco */
   border: none;
   border-radius: 4px;
   font-weight: bold;
@@ -135,18 +131,19 @@ export const CellButton = styled.button<{status: CellStatus, selected: boolean}>
   transition: background 0.3s, opacity .3s, filter .2s ease;
   font-size: 12px;
   cursor: pointer;
-  text-shadow: 0 0 10px ${neonPurple}, 0 0 20px ${neonPurple}, 0 0 30px ${neonPurple}, 0 0 40px ${neonPurple}, 0 0 70px ${neonPurple}, 0 0 80px ${neonPurple}, 0 0 100px ${neonPurple}, 0 0 150px ${neonPurple}; /* Add neon effect to text */
-`;
-
-export const CellFrame = styled.div`
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  right: -2px;
-  bottom: -2px;
-  border: 3px solid ${neonPurple}; /* Set border color to neon purple */
-  border-radius: 6px; /* Adjust border radius as needed */
-
+  overflow: hidden; /* Para ocultar cualquier contenido que se desborde */
+  z-index: 0; /* Asegúrate de que el botón esté detrás del marco */
+  &:before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background: ${neonPurple}; /* Utiliza el color de neón para el fondo del marco */
+    border-radius: 8px; /* Ajusta el radio del borde del marco */
+    z-index: -1; /* Coloca el marco detrás del botón */
+  }
 
   ${(props) => props.selected && css`
     animation: ${tickingAnimation} .5s ease infinite;
