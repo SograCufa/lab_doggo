@@ -116,24 +116,37 @@ export const Level = styled.div<{$active: boolean}>`
   `}
 `
 
+export const CellButtonContainer = styled.div`
+  position: relative;
+  display: inline-block;
+`;
+
 export const CellButton = styled.button<{status: CellStatus, selected: boolean}>`
-display: flex;
-position: relative;
-align-items: center;
-justify-content: center;
-background: ${darkPurple}; /* Change background color to dark purple */
-color: #fff; /* Change text color to white */
-border: none;
-border-bottom: 5px solid ${darkPurple}55; /* Use dark purple color with transparency for the border */
-border-radius: 4px;
-font-weight: bold;
-aspect-ratio: 1;
-width: 60px;
-transition: background 0.3s, opacity .3s, filter .2s ease;
-font-size: 12px;
-cursor: pointer;
-text-shadow: 0 0 10px ${neonPurple}, 0 0 20px ${neonPurple}, 0 0 30px ${neonPurple}, 0 0 40px ${neonPurple}, 0 0 70px ${neonPurple}, 0 0 80px ${neonPurple}, 0 0 100px ${neonPurple}, 0 0 150px ${neonPurple}; /* Add neon effect to text */
-box-shadow: 0 0 10px ${neonPurple}, 0 0 20px ${neonPurple}, 0 0 30px ${neonPurple}, 0 0 40px ${neonPurple}, 0 0 70px ${neonPurple}, 0 0 80px ${neonPurple}, 0 0 100px ${neonPurple}, 0 0 150px ${neonPurple}; /* Add neon frame */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: ${darkPurple}; /* Change background color to dark purple */
+  color: #fff; /* Change text color to white */
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  aspect-ratio: 1;
+  width: 60px;
+  transition: background 0.3s, opacity .3s, filter .2s ease;
+  font-size: 12px;
+  cursor: pointer;
+  text-shadow: 0 0 10px ${neonPurple}, 0 0 20px ${neonPurple}, 0 0 30px ${neonPurple}, 0 0 40px ${neonPurple}, 0 0 70px ${neonPurple}, 0 0 80px ${neonPurple}, 0 0 100px ${neonPurple}, 0 0 150px ${neonPurple}; /* Add neon effect to text */
+`;
+
+export const CellFrame = styled.div`
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border: 3px solid ${neonPurple}; /* Set border color to neon purple */
+  border-radius: 6px; /* Adjust border radius as needed */
+
 
   ${(props) => props.selected && css`
     animation: ${tickingAnimation} .5s ease infinite;
