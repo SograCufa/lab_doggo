@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 
 // Define el color violeta oscuro
-const darkPurple = '#4B0082';
+const darkPurple = '#C62ED4';
 
 // Define el color violeta neón
 const neonPurple = '#C62ED4';
