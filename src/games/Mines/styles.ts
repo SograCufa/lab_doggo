@@ -1,5 +1,14 @@
 import styled, { css, keyframes } from 'styled-components'
 import { CellStatus } from './types'
+import styled from 'styled-components';
+
+
+// Define el color violeta oscuro
+const darkPurple = '#4B0082';
+
+// Define el color violeta neón
+const neonPurple = '#C62ED4';
+
 
 const tickingAnimation = keyframes`
   0%, 50%, 100% {
@@ -112,10 +121,10 @@ export const CellButton = styled.button<{status: CellStatus, selected: boolean}>
   position: relative;
   align-items: center;
   justify-content: center;
-  background: #C62ED4;
-  background-size: 100%;
+  background: ${darkPurple}; /* Cambia el color de fondo a violeta oscuro */
+  color: #fff; /* Cambia el color del texto a blanco */
   border: none;
-  border-bottom: 5px solid #00000055;
+  border-bottom: 5px solid ${darkPurple}55; /* Utiliza el color violeta oscuro con transparencia para el borde */
   border-radius: 4px;
   font-weight: bold;
   aspect-ratio: 1;
@@ -123,6 +132,7 @@ export const CellButton = styled.button<{status: CellStatus, selected: boolean}>
   transition: background 0.3s, opacity .3s, filter .2s ease;
   font-size: 12px;
   cursor: pointer;
+  text-shadow: 0 0 10px ${neonPurple}, 0 0 20px ${neonPurple}, 0 0 30px ${neonPurple}, 0 0 40px ${neonPurple}, 0 0 70px ${neonPurple}, 0 0 80px ${neonPurple}, 0 0 100px ${neonPurple}, 0 0 150px ${neonPurple}; /* Agrega el efecto de neón al texto */
 
   ${(props) => props.selected && css`
     animation: ${tickingAnimation} .5s ease infinite;
