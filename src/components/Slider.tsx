@@ -62,6 +62,7 @@ const StyledContent = styled.div`
   width: 100%;
   scroll-snap-type: x mandatory;
   transition: height .25s ease;
+  flex-wrap: wrap;
 
   &::-webkit-scrollbar {
     height: .0em;
