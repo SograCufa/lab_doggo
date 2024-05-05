@@ -15,7 +15,7 @@ export const GAMES: GameBundle[] = [
   {
     id: 'dice',
     meta: {
-      background: '#ff6490',
+      background: '#131313',
       name: 'Dice',
       image: '/games/dice.png',
       description: `
@@ -27,7 +27,7 @@ export const GAMES: GameBundle[] = [
   {
     id: 'slots',
     meta: {
-      background: '#5465ff',
+      background: '#131313',
       name: 'Slots',
       image: '/games/slots.png',
       description: `
@@ -44,7 +44,7 @@ export const GAMES: GameBundle[] = [
         Flip offers a straightforward yet thrilling gamble: choose Heads or Tails and double your money or lose it all. This simple, high-stakes game tests your luck and decision-making with every flip of the coin.
       `,
       image: '/games/flip.png',
-      background: '#ffe694',
+      background: '#131313',
     },
     app: React.lazy(() => import('./Flip')),
   },
@@ -56,7 +56,7 @@ export const GAMES: GameBundle[] = [
       description: `
         HiLo is a game of foresight and luck, challenging players to guess whether the next card will be higher or lower. Make consecutive correct guesses to increase your winnings, and decide when to cash out for maximum rewards.
       `,
-      background: '#ff4f4f',
+      background: '#131313',
     },
     props: { logo: '/logo.png' },
     app: React.lazy(() => import('./HiLo')),
@@ -69,7 +69,7 @@ export const GAMES: GameBundle[] = [
         There's money hidden beneath the squares. The reward will increase the more squares you reveal, but watch out for the 5 hidden mines. Touch one and you'll go broke. You can cash out at any time.
       `,
       image: '/games/mines.png',
-      background: '#8376ff',
+      background: '#131313',
     },
     app: React.lazy(() => import('./Mines')),
   },
@@ -81,14 +81,14 @@ export const GAMES: GameBundle[] = [
       description: `
         Roulette brings the classic wheel-spinning game to life with a digital twist. Bet on where the ball will land and watch as the wheel decides your fate. With straightforward rules and the chance for big wins, Roulette is a timeless game of chance.
       `,
-      background: '#1de87e',
+      background: '#131313',
     },
     app: React.lazy(() => import('./Roulette')),
   },
   {
     id: 'plinko',
     meta: {
-      background: '#7272ff',
+      background: '#131313',
       image: '/games/plinko.png',
       name: 'Plinko',
       description: `
@@ -113,7 +113,7 @@ export const GAMES: GameBundle[] = [
   {
     id: "limbo",
     meta: {
-      background: "#ff7d7d",
+      background: "#131313",
       name: "Limbo",
       image: "/games/limbo/limbo.png",
       description: `Limbo challenges players to walk the fine line between ambition and caution, where every decision shapes their destiny. Set a target multiplier and place your bet, daring to defy the odds. As the stakes rise, so does the adrenaline, pushing players to test their strategy and intuition in pursuit of monumental victories, ensuring an immersive and adrenaline-fueled gaming experience.`,
@@ -123,7 +123,7 @@ export const GAMES: GameBundle[] = [
   {
     id: "keno",
     meta: {
-      background: "#317aff",
+      background: "#131313",
       name: "Keno",
       image: "/games/keno/logo.png",
       description: `Keno beckons players into a world of strategic decision-making and anticipation, where every choice holds the potential for untold riches. Select up to 10 blocks and place your bets, eagerly awaiting the draw that will determine your fate. Whether opting for fewer numbers and the allure of substantial wins or more numbers for increased odds of success, Keno promises a riveting experience filled with excitement and possibility.`,
