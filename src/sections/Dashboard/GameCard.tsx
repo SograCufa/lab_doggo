@@ -95,9 +95,13 @@ const StyledGameCard = styled(NavLink)<{$small: boolean, $background: string}>`
     opacity: 1;
   }
   &:hover {
-    outline: #9564ff33 solid 5px;
+    outline: #C62ED4 solid 5px;
     outline-offset: 0px;
   }
+  /* Neon border effect */
+  box-shadow: 0 0 5px #C62ED4, /* Change color code for desired neon color */
+              0 0 10px #C62ED4,
+              0 0 15px #C62ED4;
               
               /* Neon border effect */
               outline: 2px solid #C62ED4; /* Change color code for desired neon color */
