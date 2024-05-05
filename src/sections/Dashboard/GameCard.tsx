@@ -22,14 +22,11 @@ const StyledGameCard = styled(NavLink)<{$small: boolean, $background: string}>`
   aspect-ratio: ${(props) => props.$small ? '1/.5' : '1/.6'};
   background-size: cover;
   border-radius: 10px;
-
   color: white;
   text-decoration: none;
   font-size: 24px;
-
   transition: transform .2s ease;
   /* border-bottom: 2px solid #00000033; */
-
   & > .background {
     position: absolute;
     left: 0;
@@ -92,7 +89,6 @@ const StyledGameCard = styled(NavLink)<{$small: boolean, $background: string}>`
     bottom: 5px;
     opacity: 0;
     text-transform: uppercase;
-
     backdrop-filter: blur(20px);
   }
   &:hover .play {
@@ -102,6 +98,10 @@ const StyledGameCard = styled(NavLink)<{$small: boolean, $background: string}>`
     outline: #9564ff33 solid 5px;
     outline-offset: 0px;
   }
+  /* Neon border effect */
+  box-shadow: 0 0 20px #C62ED4, /* Change color code for desired neon color */
+              0 0 40px #C62ED4,
+              0 0 80px #C62ED4;
 `
 
 export function GameCard({ game }: {game: GameBundle}) {
