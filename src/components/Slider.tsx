@@ -57,8 +57,7 @@ export const StyledSection = styled.div`
 `
 
 const StyledContent = styled.div`
-  flex-direction:row;
-  flex-wrap:wrap;
+  display: flex;
   gap: 15px;
   width: 100%;
   scroll-snap-type: x mandatory;
