@@ -100,9 +100,7 @@ const StyledGameCard = styled(NavLink)<{$small: boolean, $background: string}>`
   }
   box-shadow: 0 0 20px #C62ED4, /* Change color code for desired neon color */
               0 0 40px #C62ED4,
-  /* Neon border effect */
-  outline: 2px solid #C62ED4; /* Change color code for desired neon color */
-`
+ `
 
 export function GameCard({ game }: {game: GameBundle}) {
   const small = useLocation().pathname !== '/'
