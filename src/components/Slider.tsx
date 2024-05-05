@@ -57,10 +57,10 @@ export const StyledSection = styled.div`
 `
 
 const StyledContent = styled.div`
-  display: flex;
+  flex-direction:row;
+  flex-wrap:wrap;
   gap: 15px;
   width: 100%;
-  overflow: scroll visible;
   scroll-snap-type: x mandatory;
   transition: height .25s ease;
 
